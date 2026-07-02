@@ -61,13 +61,23 @@ class WelcomeScreen extends StatelessWidget {
                   Container(
                     width: size.width * 0.5,
                     height: 60.0,
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
                       },
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
-                      textColor: Colors.white,
-                      padding: const EdgeInsets.all(0),
+                      style: ButtonStyle(
+                        shape: WidgetStatePropertyAll(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(80.0),
+                          ),
+                        ),
+                        padding: const WidgetStatePropertyAll(
+                          EdgeInsets.zero,
+                        ),
+                        foregroundColor: const WidgetStatePropertyAll(
+                          Colors.white,
+                        ),
+                      ),
                       child: Container(
                         alignment: Alignment.center,
                         decoration: new BoxDecoration(
@@ -75,7 +85,7 @@ class WelcomeScreen extends StatelessWidget {
                           color: kPrimaryColor,
                           boxShadow: <BoxShadow>[
                             BoxShadow(
-                              color: kPrimaryColor.withOpacity(0.30),
+                              color: kPrimaryColor.withValues(alpha: 0.30),
                               blurRadius: 20,
                               offset: Offset(0, 8),
                             )

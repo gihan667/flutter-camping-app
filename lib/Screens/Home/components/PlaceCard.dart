@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class PlaceCard extends StatelessWidget {
   const PlaceCard({
-    Key key,
-    @required this.place
+    key,
+    required this.place
   }) : super(key: key);
 
   final Place place;

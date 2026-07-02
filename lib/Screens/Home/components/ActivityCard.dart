@@ -6,8 +6,8 @@ import '../../../constants.dart';
 
 class ActivityCard extends StatefulWidget {
   const ActivityCard({
-    Key key,
-    @required this.activity
+    key,
+    required this.activity
   }) : super(key: key);
 
   final Activity activity;
